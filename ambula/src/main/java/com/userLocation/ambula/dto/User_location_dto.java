@@ -1,23 +1,32 @@
-package com.userLocation.ambula.models;
+package com.userLocation.ambula.dto;
 
 import lombok.*;
 
-import javax.persistence.*;
-
-@Entity
+@Data
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
-//This class used to store location related data and data which fetch by Reader user.
-public class User_location {
+//This is dto class which help in get data user and mapped to User_location class.
 
-    @Id
+public class User_location_dto {
+
     private String name;
     private double latitude;
     private double longitude;
 
+    private String password;
+
+
+//    We used lambock in this class but if lambock did not work then these getter setter will work
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getName() {
         return name;
