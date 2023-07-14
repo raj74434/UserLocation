@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 
-public interface User_location_repo extends JpaRepository<User_location,Integer> {
+public interface User_location_repo extends JpaRepository<User_location,String> {
 
 
 
